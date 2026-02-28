@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Changelog | Tropical RP</title>
+
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/85fBrXck/logo.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tropical Roleplay">
+    <meta property="og:description" content="The official change log of TRP">
+    <meta property="og:image" content="https://i.postimg.cc/85fBrXck/logo.png">
+    <meta name="theme-color" content="#3b82f6">
+    <meta name="twitter:card" content="summary">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&family=Space+Grotesk:wght@700&display=swap');
         
@@ -22,11 +32,10 @@
         .full-bg {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.95)), 
-                        url('https://cdn.discordapp.com/attachments/1472741931258744854/1473404367146188930/Screenshot_2026-02-17_143610.png');
+            url('https://i.postimg.cc/xCNybp88/Screenshot_2026_01_26_235124.png');
             background-size: cover; background-position: center; z-index: -1;
         }
 
-        /* Tactical Scanlines */
         .full-bg::after {
             content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
             background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
@@ -34,15 +43,16 @@
         }
 
         nav { position: fixed; top: 0; width: 100%; padding: 30px 6%; display: flex; justify-content: space-between; align-items: center; z-index: 100; background: rgba(2, 6, 23, 0.5); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
-        .logo { font-family: 'Space Grotesk'; font-size: 1.2rem; letter-spacing: 3px; color: var(--blue); text-transform: uppercase; font-weight: 800; text-decoration: none; }
+        .logo-wrapper { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { width: 32px; height: 32px; object-fit: contain; }
+        .logo-text { font-family: 'Space Grotesk'; font-size: 1.2rem; letter-spacing: 3px; color: var(--blue); text-transform: uppercase; font-weight: 800; }
+        
         .nav-links a { color: #cbd5e1; text-decoration: none; margin-left: 25px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
 
         .container { max-width: 900px; margin: 140px auto 60px; padding: 0 20px; }
-        
         h1 { font-family: 'Space Grotesk'; font-size: 3rem; margin-bottom: 10px; letter-spacing: -2px; }
         .subtitle { color: #94a3b8; margin-bottom: 50px; font-size: 1.1rem; }
 
-        /* Log Entry Styling */
         .log-card {
             background: var(--card);
             backdrop-filter: blur(20px);
@@ -60,10 +70,8 @@
 
         .change-category { margin-top: 20px; }
         .cat-title { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: flex; align-items: center; }
-        
         .type-added { color: var(--green); }
         .type-fixed { color: var(--blue); }
-        .type-removed { color: var(--red); }
 
         ul { list-style: none; padding: 0; margin: 0; }
         li { padding: 8px 0; color: #cbd5e1; font-size: 0.95rem; display: flex; align-items: flex-start; }
@@ -76,7 +84,10 @@
     <div class="full-bg"></div>
 
     <nav>
-        <a href="index.html" class="logo">TROPICAL<span style="color:white">RP</span></a>
+        <a href="index.html" class="logo-wrapper">
+            <img src="https://i.postimg.cc/85fBrXck/logo.png" class="logo-img" alt="Logo">
+            <span class="logo-text">TROPICAL<span style="color:white">RP</span></span>
+        </a>
         <div class="nav-links">
             <a href="https://discord.gg/gVZWrem6bS">Discord</a>
         </div>
@@ -111,6 +122,7 @@
                 </ul>
             </div>
         </div>
+    </div>
 
     <footer style="text-align: center; padding: 40px; color: #475569; font-size: 0.7rem; letter-spacing: 2px;">
         &copy; 2026 TROPICAL ROLEPLAY • COMMIT: FederalAuthority
