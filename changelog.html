@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog | Tropical RP</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&family=Space+Grotesk:wght@700&display=swap');
+        
+        :root { 
+            --blue: #3b82f6; 
+            --bg: #020617; 
+            --card: rgba(15, 23, 42, 0.6);
+            --border: rgba(255, 255, 255, 0.08);
+            --green: #10b981;
+            --red: #ef4444;
+        }
+
+        * { box-sizing: border-box; transition: all 0.2s ease; }
+        body, html { margin: 0; padding: 0; background: var(--bg); color: white; font-family: 'Plus Jakarta Sans', sans-serif; min-height: 100vh; }
+
+        .full-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.95)), 
+                        url('https://cdn.discordapp.com/attachments/1472741931258744854/1473404367146188930/Screenshot_2026-02-17_143610.png');
+            background-size: cover; background-position: center; z-index: -1;
+        }
+
+        /* Tactical Scanlines */
+        .full-bg::after {
+            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%);
+            background-size: 100% 4px; pointer-events: none;
+        }
+
+        nav { position: fixed; top: 0; width: 100%; padding: 30px 6%; display: flex; justify-content: space-between; align-items: center; z-index: 100; background: rgba(2, 6, 23, 0.5); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+        .logo { font-family: 'Space Grotesk'; font-size: 1.2rem; letter-spacing: 3px; color: var(--blue); text-transform: uppercase; font-weight: 800; text-decoration: none; }
+        .nav-links a { color: #cbd5e1; text-decoration: none; margin-left: 25px; font-weight: 700; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        .container { max-width: 900px; margin: 140px auto 60px; padding: 0 20px; }
+        
+        h1 { font-family: 'Space Grotesk'; font-size: 3rem; margin-bottom: 10px; letter-spacing: -2px; }
+        .subtitle { color: #94a3b8; margin-bottom: 50px; font-size: 1.1rem; }
+
+        /* Log Entry Styling */
+        .log-card {
+            background: var(--card);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .log-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; border-bottom: 1px solid var(--border); padding-bottom: 15px; }
+        .version { font-family: 'Space Grotesk'; font-size: 1.5rem; color: var(--blue); }
+        .date { font-size: 0.8rem; color: #64748b; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+        .change-category { margin-top: 20px; }
+        .cat-title { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; display: flex; align-items: center; }
+        
+        .type-added { color: var(--green); }
+        .type-fixed { color: var(--blue); }
+        .type-removed { color: var(--red); }
+
+        ul { list-style: none; padding: 0; margin: 0; }
+        li { padding: 8px 0; color: #cbd5e1; font-size: 0.95rem; display: flex; align-items: flex-start; }
+        li::before { content: "—"; margin-right: 12px; color: #475569; }
+
+        .tag { font-size: 0.6rem; padding: 2px 8px; border-radius: 4px; margin-left: 10px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); vertical-align: middle; }
+    </style>
+</head>
+<body>
+    <div class="full-bg"></div>
+
+    <nav>
+        <a href="index.html" class="logo">TROPICAL<span style="color:white">RP</span></a>
+        <div class="nav-links">
+            <a href="https://discord.gg/gVZWrem6bS">Discord</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Development <span style="color:var(--blue)">Logs</span></h1>
+        <p class="subtitle">Track every update, patch, and addition to the Tropical RP environment.</p>
+
+        <div class="log-card">
+            <div class="log-header">
+                <div class="version">v2.1.0 <span class="tag">LATEST</span></div>
+                <div class="date">February 28, 2026</div>
+            </div>
+
+            <div class="change-category">
+                <div class="cat-title type-added">● New Content</div>
+                <ul>
+                    <li>New gun models.</li>
+                    <li>Updated websites.</li>
+                    <li>New scripts.</li>
+                    <li>More optimization.</li>
+                </ul>
+            </div>
+
+            <div class="change-category">
+                <div class="cat-title type-fixed">● Bug Fixes</div>
+                <ul>
+                    <li>Fixed UI flicker when using the /calladmin command.</li>
+                    <li>Resolved issue where vehicle fuel would reset after a crash.</li>
+                    <li>Optimized textures in Mirror Park to increase FPS by 15%.</li>
+                </ul>
+            </div>
+        </div>
+
+    <footer style="text-align: center; padding: 40px; color: #475569; font-size: 0.7rem; letter-spacing: 2px;">
+        &copy; 2026 TROPICAL ROLEPLAY • COMMIT: FederalAuthority
+    </footer>
+</body>
+</html>
